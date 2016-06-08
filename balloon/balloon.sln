@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "balloon.CSharp.Plugins", "balloon.CSharp.Plugins.csproj", "{6F084939-4281-A782-0FAA-3F827440D441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "balloon.CSharp", "balloon.CSharp.csproj", "{A31FB419-C8C6-33F4-5BC9-735AC7E2748E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "balloon.CSharp.Editor.Plugins", "balloon.CSharp.Editor.Plugins.csproj", "{DDDD79E6-5283-0B83-9153-567BD72D6984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "balloon.CSharp.Editor", "balloon.CSharp.Editor.csproj", "{3BF7DB52-13CA-0FAA-501A-BC87F5DF6977}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F084939-4281-A782-0FAA-3F827440D441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F084939-4281-A782-0FAA-3F827440D441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F084939-4281-A782-0FAA-3F827440D441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F084939-4281-A782-0FAA-3F827440D441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31FB419-C8C6-33F4-5BC9-735AC7E2748E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31FB419-C8C6-33F4-5BC9-735AC7E2748E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31FB419-C8C6-33F4-5BC9-735AC7E2748E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31FB419-C8C6-33F4-5BC9-735AC7E2748E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDDD79E6-5283-0B83-9153-567BD72D6984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDDD79E6-5283-0B83-9153-567BD72D6984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDDD79E6-5283-0B83-9153-567BD72D6984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDDD79E6-5283-0B83-9153-567BD72D6984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF7DB52-13CA-0FAA-501A-BC87F5DF6977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF7DB52-13CA-0FAA-501A-BC87F5DF6977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF7DB52-13CA-0FAA-501A-BC87F5DF6977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF7DB52-13CA-0FAA-501A-BC87F5DF6977}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
