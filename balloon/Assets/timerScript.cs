@@ -18,8 +18,8 @@ public class timerScript : MonoBehaviour {
 	int number;
 	// Use this for initialization
 	void Start () {
-		scoreObj = GameObject.Find ("score");
-		balObj = GameObject.Find ("balloon");
+		//scoreObj = GameObject.Find ("score");
+		//balObj = GameObject.Find ("balloon");
 		Debug.Log (balObj + "###########################################");
 		timerStarted = true;
 		numberImageRenderer = GetComponent<NumberImageRenderer>();
@@ -28,15 +28,18 @@ public class timerScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        this.gameObject.SetActive(true);
+        //this.gameObject.SetActive(true);
 		if (timerStarted) {
 			timerCount -= Time.deltaTime;
+            //Debug.Log(timerCount);
 			if (timerCount <= 0) {
-				timerCount = 6;
+				//timerCount = 6;
+                //タイマーを止める
 				timerStarted = false;
                 //タイマーを非表示にする
                 this.gameObject.SetActive(false);
 
+                //ゲームを再開させる
 				scoreObj.SetActive (true);
 				balObj.SetActive (true);
 
@@ -44,11 +47,15 @@ public class timerScript : MonoBehaviour {
 				balloonScripts balSc = balObj.GetComponent<balloonScripts>();
 				Debug.Log (balSc);
 				balSc.restartGame ();
+
+                score scoreSc = scoreObj.GetComponent<score>();
+                Debug.Log(scoreSc);
+                scoreSc.restartGame();
                 //for(int i = 0;i<3; i++)
                 //{
-                    //GameObject instance = (GameObject)Instantiate(balloonObj[i]);
+                //GameObject instance = (GameObject)Instantiate(balloonObj[i]);
                 //}
-                
+
             }
 		}
 		numberImageRenderer.Render((int)timerCount);
@@ -57,8 +64,17 @@ public class timerScript : MonoBehaviour {
 
 	public void Restart(){
 		Debug.Log ("restart ############################################################");
-		timerCount = 9;
+		timerCount = 6;
 		this.gameObject.SetActive (true);
+        //タイマーを開始する
+        timerStarted = true;
 
-	}
+        scoreObj = GameObject.Find("score");
+        balObj = GameObject.Find("balloon");
+
+        scoreObj.SetActive(false);
+        balObj.SetActive(false);
+
+
+    }
 }

@@ -36,13 +36,15 @@ public class generatePrefab : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //ここは削除しないと。
+        
         if (hissatsutimerStarted)
         {
             timePassed += Time.deltaTime;
             //Debug.Log(timePassed);
-            if (timePassed >= 5)
+            if (timePassed >= 10)
             {
-                timePassed = 5;
+                timePassed = 10;
                 Debug.Log("必殺技OK!!");
                 hissatsutimerStarted = false;
                 hissatsu = true;
@@ -51,7 +53,7 @@ public class generatePrefab : MonoBehaviour {
 
             }
         }
-
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("QUIT");
@@ -89,6 +91,15 @@ public class generatePrefab : MonoBehaviour {
             hissatsutimerStarted = true;
             hissatsuPose.SetActive(false);
             timePassed = 0;
+
+            //healingBalloon
+            GameObject balloonObj = GameObject.Find("balloon");
+            balloonScripts bs = balloonObj.GetComponent<balloonScripts>();
+            Debug.Log(bs);
+            bs.healingBalloon();
+
+            //mightyBalloon
+            bs.mightyBalloon();
 
         }
     }

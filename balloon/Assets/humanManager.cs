@@ -6,7 +6,8 @@ public class humanManager : MonoBehaviour {
     int balloonCounter;
 
     // 爆発のPrefab
-	public Sprite explosion;
+	//public Sprite explosion;
+    public GameObject explosion;
 	public GameObject hissatsuPose;
 
 	//public GameObject hissatsuPose;
@@ -25,10 +26,12 @@ public class humanManager : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        /*
 		hissatsuPose = GameObject.FindGameObjectWithTag("gui");
 		hissatsuPose.SetActive(false);
         hissatsutimerStarted = true;
         hissatsu = false;
+        */
     }
 
     // Update is called once per frame
@@ -49,6 +52,7 @@ public class humanManager : MonoBehaviour {
             }
         }
 
+        /*
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("QUIT");
@@ -60,9 +64,11 @@ public class humanManager : MonoBehaviour {
             Debug.Log("必殺技発動");
             doHissatsu();
         }
+        */
 
     }
 
+    /*
     void doHissatsu()
     {
         if (hissatsu)
@@ -73,12 +79,14 @@ public class humanManager : MonoBehaviour {
             GameObject[] ochimonos = GameObject.FindGameObjectsWithTag("drops");
             foreach (GameObject ochimono in ochimonos)
             {
-                //ochimono.Explosion();
-                Destroy(ochimono);
+                
                 //爆発スプライト表示
 				SpriteRenderer sr = ochimono.GetComponent<SpriteRenderer>();
 				//ochimono.GetComponent<SpriteRenderer>() = explosion;
 				sr.sprite = explosion;
+
+                //ochimono.Explosion();
+                Destroy(ochimono);
             }
 
             //その後再カウント
@@ -87,5 +95,6 @@ public class humanManager : MonoBehaviour {
         
         }
     }
+    */
 
 }

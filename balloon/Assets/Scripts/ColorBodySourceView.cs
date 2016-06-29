@@ -14,6 +14,9 @@ public class ColorBodySourceView : MonoBehaviour
 	public Camera ConvertCamera;
 
 	public GameObject jointBall;
+    public GameObject rightHandPosition;
+    public GameObject leftHandPosition;
+    public GameObject headPosition;
 
 	private Kinect.CoordinateMapper _CoordinateMapper;
 
